@@ -10,12 +10,11 @@ Your objective is to program a web application that can compute and display
 the historical balances of a Bitcoin address.
 
 An account balance is the amount of money that is present in an account at a
-given moment in time. For instance, a newly created Bitcoin wallet usually
-has a balance of `0 BTC`. Then, if someone sends `100 BTC` to this wallet,
-its balance will be `100 BTC`. Now, if the owner of the wallet sends 10 BTC
-to another address, its balance would be `100 BTC - 10 BTC - Fee of the
-transaction`. As explained by Alicia Tuovila on
-[Investopedia](https://www.investopedia.com/terms/a/accountbalance.asp):
+given moment in time. For instance, a newly created Bitcoin wallet usually has
+a balance of `0 BTC`. Then, if someone sends `100 BTC` to this wallet, its
+balance will be `100 BTC`. Now, if the owner of the wallet sends 10 BTC to
+another address, its balance would be `100 BTC - 10 BTC`. As explained by
+Alicia Tuovila on [Investopedia](https://www.investopedia.com/terms/a/accountbalance.asp):
 
 > The account balance is always the net amount after factoring in all debits and credits.
 
