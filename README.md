@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# Cryptio Technical Interview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello! If you are reading this, you are most likely interested in taking
+a technical job at [Cryptio](https://cryptio.co/). If that's not the case,
+please take a look at our [open positions](https://cryptio.welcomekit.co/).
 
-## Available Scripts
+## What is it about?
 
-In the project directory, you can run:
+Your objective is to program a web application that can compute and display
+the historical balances of a Bitcoin address.
 
-### `npm start`
+An account balance is the amount of money that is present in an account at a
+given moment in time. For instance, a newly created Bitcoin wallet usually
+has a balance of `0 BTC`. Then, if someone sends `100 BTC` to this wallet,
+its balance will be `100 BTC`. Now, if the owner of the wallet sends 10 BTC
+to another address, its balance would be `100 BTC - 10 BTC - Fee of the
+transaction`. As explained by Alicia Tuovila on
+[Investopedia](https://www.investopedia.com/terms/a/accountbalance.asp):
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> The account balance is always the net amount after factoring in all debits and credits.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+We voluntary don't set a lot of constraints. You are free to design your
+application the way you want. If you want to show the historical balances
+as a table with each row corresponding to a transaction, it is fine. If you
+want to plot a graph that shows historical balances on a monthly bases,
+that is also fine. If you want to do a combination of the two, well that would
+be awesome!
 
-### `npm test`
+If you enjoy this project and want to develop additional features, we will
+greatly value them. Here are a few ideas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Associate each transaction/balance with its USD counterpart
+* Implement caching, either on the client or on server, to speed up the
+  computation of addresses that has already been seen
+* Integrate more Blockchains (challenging ones include the Ethereum and the Tezos
+  blockchains)
 
-### `npm run build`
+## Technical considerations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We require that you ship both a front-end, and a little API for your
+application. One could argue that the whole project could be implemented as a
+front-end that only relies on third-party APIs and performs all the
+computation on the client-side but we would like to read both front-end
+**and** back-end code from you!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**If you are applying for an intership**, you are free to use any framework or
+library you want.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**If you are applying for a full-time position**, you must use the following
+technologies:
 
-### `npm run eject`
+* [React](https://reactjs.org/) (with [TypeScript](https://www.typescriptlang.org/)) - other React flavored frameworks such as Next.js are also valid
+* [Express](https://expressjs.com/) (with [TypeScript](https://www.typescriptlang.org/)) - Koa, Fastify, and NestJS are also fine
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This repository is actually a monorepo that contains a starter based on
+React and Express. We recommend that you use it but feel free to boostrap
+your own project if that makes you more confortable.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The `front/` directory is a React project that has been created using
+[Create React App](https://create-react-app.dev/), with TypeScript support.
+Here are a few scripts:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* `npm run start` - starts the application in development mode
+  (with hot reloading, etc)
+* `npm run build` - builds the application for production
+* `npm run lint` - lints all `.ts` and `.tsx` files
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The `back/` directory is an Express project, also with TypeScript. The related
+scripts are:
 
-## Learn More
+* `npm run start` - starts the application in development mode
+* `npm run prod` - starts the application in production mode
+* `npm run lint` - lints all `*.ts` files
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Third party APIs
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You are welcome to use any third party API. Here are a few ones we recommend:
+
+* [Blockchain.com](https://www.blockchain.com/api/blockchain_api) - open and
+  free API for the Bitcoin blockchain
+* [Etherscan](https://etherscan.io/apis) - free API for the Ethereum
+  blockchain - requires that you create a free account in order to get an API
+  key - has a few limitations but just ignore them
+* [CoinGecko](https://www.coingecko.com/en/api) - open and free API for crypto
+  pricing
+* [Fixer](https://fixer.io/) - API for fiat pricing - has a free plan that
+  requires you to create an account
+
+## Questions
+
+Do not hesitate to ask for precisions or even some help!
+
+Send an email to `lucas [at] cryptio [dot] co`.
