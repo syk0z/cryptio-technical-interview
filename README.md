@@ -27,7 +27,7 @@ that is also fine. If you want to do a combination of the two, well that would
 be awesome!
 
 If you enjoy this project and want to develop additional features, we will
-greatly value them. Here are a few ideas:
+greatly value it. Here are a few ideas:
 
 * Associate each transaction/balance with its USD counterpart
 * Implement caching, either on the client or on server, to speed up the
@@ -52,9 +52,9 @@ technologies:
 * [React](https://reactjs.org/) (with [TypeScript](https://www.typescriptlang.org/)) - other React flavored frameworks such as Next.js are also valid
 * [Express](https://expressjs.com/) (with [TypeScript](https://www.typescriptlang.org/)) - Koa, Fastify, and NestJS are also fine
 
-This repository is actually a monorepo that contains a starter based on
-React and Express. We recommend that you use it but feel free to boostrap
-your own project if that makes you more confortable.
+This repository is actually a monorepo that contains some boilerplate based
+on React and Express. We recommend that you fork it and use it but feel free
+to boostrap your own project if that makes you more confortable.
 
 The `front/` directory is a React project that has been created using
 [Create React App](https://create-react-app.dev/), with TypeScript support.
@@ -68,9 +68,10 @@ Here are a few scripts:
 The `back/` directory is an Express project, also with TypeScript. The related
 scripts are:
 
-* `npm run start` - starts the application in development mode
+* `npm run start` - starts the application in development mode (be careful,
+  there is no hot reloading)
 * `npm run prod` - starts the application in production mode
-* `npm run lint` - lints all `*.ts` files
+* `npm run lint` - lints all `.ts` files
 
 ## Third party APIs
 
