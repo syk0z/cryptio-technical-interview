@@ -19,6 +19,8 @@ transaction`. As explained by Alicia Tuovila on
 
 > The account balance is always the net amount after factoring in all debits and credits.
 
+⚠️ You **don't** have to deal with the transaction fees.
+
 We voluntary don't set a lot of constraints. You are free to design your
 application the way you want. If you want to show the historical balances
 as a table with each row corresponding to a transaction, it is fine. If you
@@ -34,6 +36,8 @@ greatly value it. Here are a few ideas:
   computation of addresses that has already been seen
 * Integrate more blockchains (challenging ones include the Ethereum and the Tezos
   blockchains)
+* Properly handle the transaction fees (can be very challenging, requires a deep
+  understanding of Bitcoin transactions)
 
 ## Technical considerations
 
