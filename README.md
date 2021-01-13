@@ -1,7 +1,7 @@
 # Cryptio Technical Interview
 
-Hello! If you are reading this, you are most likely interested in taking
-a technical job at [Cryptio](https://cryptio.co/). If that's not the case,
+Hello! If you are reading this, you are most likely interested in taking a
+technical position at [Cryptio](https://cryptio.co/). If that's not the case,
 please take a look at our [open positions](https://cryptio.welcomekit.co/).
 
 ## What is it about?
@@ -32,7 +32,7 @@ greatly value it. Here are a few ideas:
 * Associate each transaction/balance with its USD counterpart
 * Implement caching, either on the client or on server, to speed up the
   computation of addresses that has already been seen
-* Integrate more Blockchains (challenging ones include the Ethereum and the Tezos
+* Integrate more blockchains (challenging ones include the Ethereum and the Tezos
   blockchains)
 
 ## Technical considerations
@@ -43,18 +43,20 @@ front-end that only relies on third-party APIs and performs all the
 computation on the client-side but we would like to read both front-end
 **and** back-end code from you!
 
-**If you are applying for an intership**, you are free to use any framework or
+**If you are applying for an internship**, you are free to use any framework or
 library you want.
 
 **If you are applying for a full-time position**, you must use the following
 technologies:
 
-* [React](https://reactjs.org/) (with [TypeScript](https://www.typescriptlang.org/)) - other React flavored frameworks such as Next.js are also valid
-* [Express](https://expressjs.com/) (with [TypeScript](https://www.typescriptlang.org/)) - Koa, Fastify, and NestJS are also fine
+* [React](https://reactjs.org/) (with [TypeScript](https://www.typescriptlang.org/)) -
+  other React flavored frameworks such as Next.js are also valid
+* [Express](https://expressjs.com/) (with [TypeScript](https://www.typescriptlang.org/)) -
+  Koa, Fastify, and NestJS are also fine
 
 This repository is actually a monorepo that contains some boilerplate based
 on React and Express. We recommend that you fork it and use it but feel free
-to boostrap your own project if that makes you more confortable.
+to bootstrap your own project if that makes you more comfortable.
 
 The `front/` directory is a React project that has been created using
 [Create React App](https://create-react-app.dev/), with TypeScript support.
@@ -73,6 +75,17 @@ scripts are:
 * `npm run prod` - starts the application in production mode
 * `npm run lint` - lints all `.ts` files
 
+You **don't** have to host a live version of your solution, although it will
+be valuated if you do it. Some services that have a free tier and fits well
+with the technologies we recommend are [Heroku](https://www.heroku.com/) for
+the back and [Vercel](https://vercel.com/) for the front.
+
+If, for some reasons, you don't want your code to be public, this not an
+issue. Just let us know how we can access it.
+
+*This repository has been bootstrapped on Node v14.15.3 (which is the LTS at
+the time of writing) on a modern Linux distribution.*
+
 ## Third party APIs
 
 You are welcome to use any third party API. Here are a few ones we recommend:
@@ -89,6 +102,6 @@ You are welcome to use any third party API. Here are a few ones we recommend:
 
 ## Questions
 
-Do not hesitate to ask for precisions or even some help!
+Do not hesitate to ask for hints or even some help!
 
 Send an email to `lucas [at] cryptio [dot] co`.
