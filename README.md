@@ -38,6 +38,13 @@ greatly value it. Here are a few ideas:
 * Properly handle the transaction fees (can be very challenging, requires a deep
   understanding of Bitcoin transactions)
 
+Here are a few addresses with not a lot of transactions that you can use
+for testing purposes:
+
+* [1GY9ci8L4EK2U3baXnuvNtpFEiL4CMsVob](https://www.blockchain.com/btc/address/1GY9ci8L4EK2U3baXnuvNtpFEiL4CMsVob)
+* [38YaqTN8B3dbXVPV8jsoh7YG3kfX3iYK3J](https://www.blockchain.com/btc/address/38YaqTN8B3dbXVPV8jsoh7YG3kfX3iYK3J)
+* [3F9L2XrrdLkWKayjrN6sWY86vkP4eDoe9b](https://www.blockchain.com/btc/address/3F9L2XrrdLkWKayjrN6sWY86vkP4eDoe9b)
+
 ## Technical considerations
 
 We require that you ship both a front-end, and a little API for your
@@ -103,8 +110,21 @@ You are welcome to use any third party API. Here are a few ones we recommend:
 * [Fixer](https://fixer.io/) - API for fiat pricing - has a free plan that
   requires you to create an account
 
+## Hints
+
+* A Bitcoin transaction is a collection of inputs, and outputs. If the address
+  you are dealing with is listed under the inputs, your balance will decrease
+  as you are spending money. On the contrary, if the address is listed under
+  the outputs, your balance will increase.
+* Your final balance should be equal to the `Final Balance`, as displayed
+  on Blockchain.com.
+* You can **not** have a negative balance.
+* The Blockchain.com API has pagination (with a maximum page length of `100`).
+
 ## Questions
 
-Do not hesitate to ask for hints or even some help!
+Do not hesitate to ask for more hints or even some help!
 
 Send an email to `lucas [at] cryptio [dot] co`.
+
+Good luck!
