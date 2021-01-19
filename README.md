@@ -23,7 +23,7 @@ Alicia Tuovila on [Investopedia](https://www.investopedia.com/terms/a/accountbal
 We voluntary don't set a lot of constraints. You are free to design your
 application the way you want. If you want to show the historical balances
 as a table with each row corresponding to a transaction, it is fine. If you
-want to plot a graph that shows historical balances on a monthly bases,
+want to plot a graph that shows historical balances on a monthly basis,
 that is also fine. If you want to do a combination of the two, well that would
 be awesome!
 
@@ -120,6 +120,8 @@ You are welcome to use any third party API. Here are a few ones we recommend:
   on Blockchain.com.
 * You can **not** have a negative balance.
 * The Blockchain.com API has pagination (with a maximum page length of `100`).
+  You **must** deal with the pagination if you want your application to be
+  able to handle large wallets.
 
 ## Questions
 
