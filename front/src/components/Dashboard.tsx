@@ -19,12 +19,12 @@ import { useQueries } from 'react-query';
 import axios from 'axios';
 import { green, blue } from '@material-ui/core/colors';
 import BalanceChart from './BalanceChart';
-import InfoCard from './components/InfoCard';
-import Transaction from './components/Transaction';
-import Loading from './components/Loading';
-import Error from './components/Error';
-import { API, GECKO_API } from './api';
-import { TransactionsResponse, CoinsValue } from './type/types';
+import InfoCard from './InfoCard';
+import Transaction from './Transaction';
+import Loading from './Loading';
+import Error from './Error';
+import { API, GECKO_API } from '../api';
+import { TransactionsResponse, CoinsValue } from '../type/types';
 
 // Array representing the differents options available (TextField Select)
 const coins = [

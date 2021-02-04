@@ -1,8 +1,8 @@
 import React from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Dashboard from './Dashboard';
-import Navbar from './Navbar';
+import Dashboard from './components/Dashboard';
+import Navbar from './components/Navbar';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

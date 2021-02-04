@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Chart from 'react-apexcharts';
-import { TransactionsResponse, CoinsValue } from './type/types';
+import { TransactionsResponse, CoinsValue } from '../type/types';
 
 interface BalanceChartProps {
   data: Array<TransactionsResponse>;
