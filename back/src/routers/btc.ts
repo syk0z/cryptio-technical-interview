@@ -17,7 +17,10 @@ const calculateHistoricalBalances = (data: Array<BtcBalanceBody>) => {
     if (index === data.length - 1) {
       prev.push({ ...curr, balance: curr.formattedValue });
     } else {
-      prev.unshift({ ...curr, balance: curr.formattedValue + prev[0].balance });
+      prev.unshift({
+        ...curr,
+        balance: Number((curr.formattedValue + prev[0].balance).toFixed(10)),
+      });
     }
     return prev;
   }, <Array<BtcBalanceBody>>[]);

@@ -27,7 +27,7 @@ const calculateHistoricalBalances = (data: Array<EthBalanceBody>) => {
     if (index === data.length - 1) {
       prev.push({ ...curr, balance: curr.formattedValue });
     } else {
-      let balance = prev[0].balance + curr.formattedValue;
+      let balance = Number((prev[0].balance + curr.formattedValue).toFixed(10));
       if (curr.formattedValue < 0) balance -= curr.fees;
       prev.unshift({ ...curr, balance });
     }
