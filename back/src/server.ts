@@ -1,16 +1,23 @@
-import express from 'express'
-import cors from 'cors'
+/* eslint-disable camelcase */
+import express from 'express';
+import cors from 'cors';
+import routes from './routers/index';
 
-const app = express()
+const app = express();
 
 // Enable CORS for *
-app.use(cors())
+app.use(cors());
 
-app.get('/ping', (_, res) => {
-  res.send('pong')
-})
+app.use(routes);
 
-const port = 8080
+app.get('/ping', async (_, res) => {
+  res.json('pong');
+});
+
+const port = 8080;
 app.listen(port, () => {
-  console.log(`Server listening on port ${port} (${process.env.NODE_ENV ?? 'unknown environment'})`)
-})
+  // eslint-disable-next-line no-console
+  console.log(
+    `Server listening on port ${port} (${process.env.NODE_ENV ?? 'unknown environment'})`,
+  );
+});

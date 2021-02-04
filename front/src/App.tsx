@@ -1,44 +1,32 @@
-import axios from 'axios'
-import { useState } from 'react'
+import React from 'react';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import Dashboard from './Dashboard';
+import Navbar from './Navbar';
 
-function App (): JSX.Element {
-  const [address, setAddress] = useState('')
-  const [APIIsLive, setAPIIsLive] = useState(false)
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    content: {
+      padding: theme.spacing(3),
+    },
+  }),
+);
 
-  useState(() => {
-    axios.get('http://localhost:8080/ping')
-      .then(resp => setAPIIsLive(resp.data === 'pong'))
-      .catch(err => {
-        console.error(err)
-        setAPIIsLive(false)
-      })
-  })
+const queryClient = new QueryClient();
+
+const App = (): JSX.Element => {
+  const classes = useStyles();
 
   return (
-    <div style={{ maxWidth: '42em', margin: '0 auto' }}>
-      <p style={{ fontWeight: 'bold' }}>Bitcoin Historical Balances</p>
-      <input
-        type='text'
-        placeholder='Please input a valid Bitcoin address'
-        value={address}
-        onChange={e => setAddress(e.target.value)}
-      />
-      <input style={{ marginLeft: '1em' }} type='submit' value='Go!' />
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <Navbar />
+        <div className={classes.content}>
+          <Dashboard />
+        </div>
+      </div>
+    </QueryClientProvider>
+  );
+};
 
-      {
-        address !== ''
-          ? <p>Historical balances for address <code>{address}</code> should appear here...</p>
-          : <p>There is no address...</p>
-      }
-
-      <hr />
-      {
-        APIIsLive
-          ? <p>The API is live!</p>
-          : <p style={{ color: 'red' }}>The API did not respond...</p>
-      }
-    </div>
-  )
-}
-
-export default App
+export default App;
